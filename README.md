@@ -7,9 +7,9 @@
 ## Requirements:
 These Python packages are required for the proper functioning:
 
-*beautifulSoup4
-*PyQt5
-*requests
+-beautifulSoup4
+-PyQt5
+-requests
 
 ```sh
 pip3 install -r requirements.txt
