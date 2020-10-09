@@ -62,3 +62,14 @@ We need to specify four things:
 After that we click **Continue Scrape** and wait to the script create the JSON files with the scraped info, you will see that the E_C_{value} part in the filenames will be decressing it means that the script follows well the "pagination" of the geo-tagged posts.
 
 ![continue_scrape](https://user-images.githubusercontent.com/45650277/95585321-75178a00-0a15-11eb-87a2-616f1055d84a.gif)
+
+### ¿What contain the JSON files?
+
+Every JSON file contain a list with the following information about the posts:
+
+* **user_id** : Numeric value that refers to the user unique id
+* **date** : Numeric value that refers to the date in wich this post was publicated, have *timestamp* format.
+* **shortcode** : Alpha-numeric value that refers to the post unique id. 
+* **post_text** : String wich contains the title text below the post.
+* **post_reactions** : Numeric valor that refers to the ammount of likes of the post.
+* **post_is_video** : Boolean value that is True if the publication is a video instead of a photo.
