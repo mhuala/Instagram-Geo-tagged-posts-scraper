@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>941</width>
-    <height>540</height>
+    <width>950</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,6 +38,18 @@ font-size:20px;
 font-family:monospace;
 }
 
+QLabel#labe_4l{
+color:white;
+font-size:20px;
+font-family:monospace;
+}
+
+QLabel#label_5{
+color:white;
+font-size:20px;
+font-family:sans-serif;
+}
+
 QLabel#label_2{
 color:white;
 font-size:20px;
@@ -50,6 +62,8 @@ font-size:12px;
 font-family:monospace;
 }
 
+
+
 QLineEdit{
 background: transparent;
 border:none;
@@ -59,8 +73,23 @@ font-size:16px;
 text-align:center;
 }
 
-QPushButton{
+QPushButton#botonData{
 background: #2d89ef;
+color:white;
+border-radius:15px;
+font-size:16px;
+}
+
+QPushButton#botonData:hover{
+font-size:18px;
+background: #2b5797;
+color:white;
+border-radius:15px;
+font-weight:bold;
+}
+
+QPushButton{
+background: #fe8c00 ;
 color:white;
 border-radius:15px;
 font-size:16px;
@@ -68,7 +97,7 @@ font-size:16px;
 
 QPushButton:hover{
 font-size:18px;
-background: #2b5797;
+background:#f83600;
 color:white;
 border-radius:15px;
 font-weight:bold;
@@ -107,30 +136,33 @@ font-weight:bold;
   <widget class="QPushButton" name="botonData">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>440</y>
+     <x>50</x>
+     <y>570</y>
      <width>251</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>Iniciar Scrape</string>
+    <string>Start Scrape</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="posts_per_page_entry">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>660</x>
      <y>200</y>
      <width>231</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>610</x>
+     <x>620</x>
      <y>140</y>
      <width>301</width>
      <height>71</height>
@@ -146,17 +178,20 @@ font-weight:bold;
   <widget class="QLineEdit" name="posts_per_file_entry">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>660</x>
      <y>340</y>
      <width>231</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>610</x>
+     <x>620</x>
      <y>280</y>
      <width>301</width>
      <height>71</height>
@@ -172,7 +207,7 @@ font-weight:bold;
   <widget class="QLabel" name="labelTitulo">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>20</x>
      <y>40</y>
      <width>921</width>
      <height>71</height>
@@ -198,28 +233,54 @@ font-weight:bold;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QPushButton" name="botonRestart">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>-30</y>
-     <width>1001</width>
-     <height>601</height>
+     <x>350</x>
+     <y>570</y>
+     <width>251</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>images/background 2.png</pixmap>
+    <string>Continue Scrape</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>620</x>
+     <y>420</y>
+     <width>301</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>End Cursor:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="end_cursor_entry">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>480</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
      <y>20</y>
-     <width>131</width>
+     <width>121</width>
      <height>131</height>
     </rect>
    </property>
@@ -227,10 +288,26 @@ font-weight:bold;
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>ig_geo.ico</pixmap>
+    <pixmap>images/ig_geo.ico</pixmap>
    </property>
   </widget>
-  <zorder>label_3</zorder>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>971</width>
+     <height>651</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>images/background.png</pixmap>
+   </property>
+  </widget>
+  <zorder>label_4</zorder>
   <zorder>tableWidget</zorder>
   <zorder>botonData</zorder>
   <zorder>posts_per_page_entry</zorder>
@@ -239,7 +316,10 @@ font-weight:bold;
   <zorder>label_2</zorder>
   <zorder>labelTitulo</zorder>
   <zorder>labelFondo</zorder>
-  <zorder>label_4</zorder>
+  <zorder>botonRestart</zorder>
+  <zorder>label_5</zorder>
+  <zorder>end_cursor_entry</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections/>
